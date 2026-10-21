@@ -171,3 +171,9 @@ El usuario priorizó quitar reproducción y Escenarios, y mostrar una instantán
 
 - Revisión independiente Sol high: el código no mostró hallazgos P1/P2 de ejecución estática. Detectó que la aceptación anterior aún exigía minuto/escenario compartibles; se actualizó el contrato OPA-006 y su verificación para reflejar la decisión posterior del usuario.
 - El implementador verificó sintaxis de cinco scripts inline y carga inicial de la maqueta en Chrome headless. La QA integrada de navegación, gráficos y tamaños queda pendiente.
+
+## Spec 02 — revisión 3, plan de Administración y Soluciones, 2026-10-21
+
+El usuario aportó una imagen de jerarquía tipo ThingsBoard y pidió paneles de Administración equivalentes, árbol hasta Dispositivo con salud y tooltip, primera selección visible y Soluciones antes de Inventario. Astra medium propuso los cortes B2 y S0–S3 antes de C. La inspección del HTML confirmó que el árbol inicial acaba en Área y que la vista de Soluciones usa una plantilla genérica con fallback al primer dispositivo; el contrato nuevo exige vistas específicas sin métricas inventadas. Se consultaron páginas oficiales de AirportIQ y RotaryIQ como referencias de composición. Formularios, relaciones editables, QA de mutaciones y ThingsBoard quedan pendientes. La revisión independiente de este documento y la implementación se registrarán por separado.
+
+- Primera revisión independiente Sol high: detectó contradicción entre VIS-017 (sidebar compacto inicial) y OPA-020 (completo), referencias antiguas a escenarios/minuto variable en Spec 01 y ambigüedad de la vibración sin señal de `p1s2` en S2. Se alineó Spec 01 con el arranque completo y la instantánea fija; S2 identifica esa vibración como muestra histórica de las 10:11. La revalidación confirmó los tres hallazgos resueltos y aprobó DOC3, sin P1/P2 pendientes. No se ejecutó QA de implementación.

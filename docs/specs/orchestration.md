@@ -138,3 +138,9 @@ El usuario aprobó implementar Spec 02 y pidió bajar la planificación de Astra
 | `/root/review_opa_base` | Sol high, revisión independiente | Revisión estática OPA-B: sin hallazgos P1/P2; corte aprobado. |
 
 Los modelos indicados reflejan las asignaciones solicitadas a `spawn_agent`; la herramienta no expone telemetría para verificar de forma independiente el modelo efectivo. No se cambia configuración del harness.
+
+## Spec 02 — revisión 3, Administración y Soluciones, 2026-10-21
+
+El usuario pidió planificar con Astra medium antes de continuar y priorizó Administración visual y Soluciones sobre formularios. `/root/astra_medium_admin_solutions_plan` recibió `gpt-6-astra` con esfuerzo `medium` y entregó la secuencia A2 → B2 → S0 → S1 → S2 → S3 → QA de lectura; no editó archivos. El coordinador contrastó [AirportIQ](https://senzary.com/solutions/airportiq/) y [RotaryIQ](https://senzary.com/solutions/rotaryiq/) en el sitio oficial de Senzary para usar su jerarquía informativa como inspiración, sin atribuir sus capacidades a los datos de IoTArg.
+
+El coordinador actualiza Spec 02 revisión 3 y tareas antes de pedir cambios de HTML. Después asigna un único escritor Sol high por corte B2/S0–S3 y una revisión independiente de cada entrega. Cada corte se publica en un commit propio. OPA-C, QA de mutaciones y conexión ThingsBoard quedan pendientes por decisión del usuario.
