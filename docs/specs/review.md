@@ -147,3 +147,11 @@ Sol high actualizó el catálogo de demo a relaciones con ID estable, lectores c
 - Revisión estática final: guardia de coordenadas y navegación de áreas sin ubicación corregidos; no se identificaron bloqueos restantes para OPA-BASE.
 - Alcance aprobado estáticamente: modelo/versionado, compatibilidad de relaciones, vacíos y recuperación de enlaces. Alta/edición/borrado y movimientos pertenecen a OPA-C; la validación dinámica integrada queda para OPA-QA.
 - No se ejecutaron pruebas ni se inspeccionó el resultado en navegador en este corte.
+
+## Spec 02 — OPA-A1, revisión estática, 2026-10-21
+
+Sol high implementó Inventario con vistas tabulares de Clientes, Ubicaciones, Activos y Dispositivos, accesos descendientes, filtros locales, orden, alcances contextuales y restauración de hash/historial.
+
+- Revisión estática independiente Sol high encontró P1: abrir un detalle de otro cliente mantenía scopes descendientes incompatibles; y P2: `customer=all` se interpretaba como cliente borrado.
+- Sol agregó poda de scopes para los destinos de navegación y permitió `customer=all` en la lectura del hash. La revisión independiente confirmó ambas correcciones y no identificó hallazgos nuevos en esas rutas.
+- Aprobado estáticamente para el corte OPA-A1. Administración/CRUD no forman parte de este corte. No se ejecutaron pruebas ni se inspeccionó el resultado en navegador; la QA dinámica queda para OPA-QA.

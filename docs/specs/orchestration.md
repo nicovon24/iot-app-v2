@@ -132,5 +132,7 @@ El usuario aprobó implementar Spec 02 y pidió bajar la planificación de Astra
 | `/root/luna_prototype_inventory` | Luna high | Inventario de símbolos y acoplamientos en el HTML entregado; sin cambios en archivos. |
 | `/root/sol_base_admin_implementation` | Sol high | Implementó OPA-BASE: catálogo/relaciones, lecturas, persistencia y compatibilidad del mapa. |
 | `/root/review_opa_base` | Sol high, revisión independiente | Dos rondas estáticas; hallazgos resueltos y OPA-BASE aprobable. No ejecutó pruebas. |
+| `/root/sol_base_admin_implementation` | Sol high | Implementó OPA-A1: cuatro tablas de Inventario, filtros, accesos contextuales y hash; corrigió hallazgos de revisión. |
+| `/root/review_opa_base` | Sol high, revisión independiente | Revisión estática OPA-A1: dos hallazgos resueltos; corte aprobado. No ejecutó pruebas. |
 
 Los modelos indicados reflejan las asignaciones solicitadas a `spawn_agent`; la herramienta no expone telemetría para verificar de forma independiente el modelo efectivo. No se cambia configuración del harness.
