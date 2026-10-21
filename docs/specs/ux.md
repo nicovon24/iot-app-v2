@@ -36,7 +36,7 @@ La diferencia entre alcance y jerarquía debe ser comprensible: país aparece co
 | UX-010 | Con WebGL no disponible se puede localizar una instalación y abrir su sensor mediante SVG/listado; no se bloquea la demo. |
 | UX-011 | Severidad y conectividad se expresan también en texto; revisar contraste con objetivo de 4,5:1 para texto normal y 3:1 para texto grande y elementos esenciales. Objetivo de área táctil: 44×44 px para controles principales. |
 | UX-012 | Movimiento reducido evita transiciones prescindibles. El instante simulado conserva enlaces directos y etiquetas temporales sin requerir la franja de reproducción, retirada por OPA-006. |
-| UX-013 | Todas las secciones tienen una entrada comprensible; Escenarios, Metodología y Administración conservan acceso visible. La agrupación final del sidebar se define tras inspección visual. |
+| UX-013 | Todas las secciones vigentes tienen una entrada comprensible; Metodología y Administración conservan acceso visible. Escenarios se retiró con la instantánea fija de Spec 02. |
 | UX-014 | Las siete soluciones explican su cobertura simulada y muestran vacío cuando no hay datos pertinentes; etiquetas y nombres siguen una política de idioma consistente. |
 | UX-015 | Un único botón del sidebar alterna entre Solo íconos y Completo en todas las vistas de escritorio. Solo íconos conserva la navegación y oculta los nombres; Completo muestra íconos y texto. El mapa inicia en Solo íconos; las demás vistas inician en Completo cuando hay ancho suficiente y en Solo íconos entre 761 y 980 px. La elección se conserva al navegar. En móvil, el menú se abre desde la cabecera y se cierra desde el sidebar. |
 
@@ -54,7 +54,7 @@ En el HTML no se agregan estados de autenticación o red ficticios. Loading, err
 | --- | --- | --- |
 | V-01 | Sobretemperatura, minuto 28, Porta/Argentina | Abrir `p1s1`, interpretar condición crítica y reconocer alarma sin resolverla |
 | V-02 | Porta + Chile | Vacío útil; quitar país recupera Córdoba |
-| V-03 | Abrir enlaces directos `scenario=offline&time=11`, `12` y `28` | Transición de conectividad y última lectura coherentes con DATA-004, sin depender de la barra retirada |
+| V-03 | Abrir enlaces heredados con `scenario=offline&time=11`, `12` y `28` | Se normalizan a la instantánea simulada fija; el dispositivo sin señal conserva su última lectura válida de las 10:11 y no recibe una muestra nueva |
 | V-04 | Abrir enlace de sensor y navegar Atrás/Adelante | Contexto restaurado; entrada inválida se normaliza según DATA-006 |
 | V-05 | Solo teclado, escritorio y menú móvil | Completar selección, búsqueda, sensor y alarma con foco gestionado |
 | V-06 | Forzar falta de WebGL | Recorrido por SVG/listado completo |

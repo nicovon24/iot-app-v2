@@ -70,7 +70,7 @@ Navegación propuesta:
 
 - **Operaciones:** Vista global, Inventario (Clientes, Ubicaciones, Activos y Dispositivos), Alarmas. [Spec 02](02-operational-tables-admin.md) define las pestañas de Inventario y Administración con Estructura/Contenido.
 - **Análisis:** Soluciones, Dashboards.
-- **Demo:** Escenarios, Metodología.
+- **Demo:** Metodología. La navegación de Escenarios se retiró al fijar la instantánea simulada en Spec 02.
 
 ### Móvil
 
@@ -173,7 +173,7 @@ Estos criterios amplían, sin reemplazar, [UX](../ux.md) y [DATA](../data.md).
 | VIS-006 | En móvil se puede buscar, cambiar ventana 60/15 minutos y leer ejes; menos marcas antes que texto reducido; alternativa accesible a la gráfica. | UX-007, UX-009, UX-011 |
 | VIS-007 | Para `p1s2`, minuto 11 es última muestra entera válida; desde 12 no se presenta cálculo posterior como medición. Lectura, gráfica y nombre accesible coinciden. | DATA-004, V-03 |
 | VIS-008 | La vista WebGL muestra relieve 3D con cámara cenital fija y sin control 2D/3D; el fallback SVG/listado funciona sin WebGL y conserva la navegación. Cada capa declara magnitud, alcance y leyenda. | UX-010, UX-011, DATA-002 |
-| VIS-009 | Recorrido por teclado y sin WebGL completo; búsqueda contiene/restaura foco. Movimiento reducido elimina transición prescindible; escenario y minuto compartible conservan datos coherentes sin barra de reproducción. | UX-007, UX-008, UX-010, UX-012, OPA-006 |
+| VIS-009 | Recorrido por teclado y sin WebGL completo; búsqueda contiene/restaura foco. Movimiento reducido elimina transición prescindible; la instantánea simulada conserva datos coherentes sin barra de reproducción. | UX-007, UX-008, UX-010, UX-012, OPA-006 |
 | VIS-010 | Con escena estática y sin interacción no hay bucle de render continuo innecesario. Evidencia en navegador registra dispositivo/entorno y límites; no inferir rendimiento físico de headless. | UX-012 |
 | VIS-011 | A 1440×900, Vista global reserva al visor al menos 65 % del alto visible; la condición y acción siguen visibles sin tapar Córdoba/Santiago. A 390×844 conserva estado → mapa → lista sin scroll horizontal. | UX-001, UX-009 |
 | VIS-012 | Seleccionar Argentina muestra provincias con límites y selección distinguibles sobre relieve 3D y cámara cenital fija. Córdoba identifica su ubicación; provincias sin ubicaciones en el alcance indican «sin datos». Volver recupera Sudamérica y filtros. La fuente geográfica y su atribución están documentadas. | UX-002, UX-010, DATA-002 |

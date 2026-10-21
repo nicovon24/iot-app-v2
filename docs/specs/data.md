@@ -51,7 +51,7 @@ Los estados agregados de ubicación y país priorizan `red > yellow > offline > 
 Ejemplo existente:
 
 ```text
-#view=device&customer=porta&country=AR&id=p1s1&scenario=overheat&time=28&layer=health&range=60
+#view=device&customer=porta&country=AR&id=p1s1&layer=health&range=60
 ```
 
 El tema se guarda en `iotarg-theme`. Una vista se guarda en `iotarg-dashboard`. El fragmento no transporta reconocimiento de alarmas, tema ni estado de reproducción. `alarmFilter` tampoco forma parte de los campos serializados por `writeHash()`. El portapapeles copia la URL cuando está disponible; no sube el HTML.

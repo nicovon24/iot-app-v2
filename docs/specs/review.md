@@ -164,3 +164,10 @@ Sol high implementó Administración con Estructura y Contenido coordinados, exp
 - La consola del usuario identificó un error de sintaxis en la plantilla de `adminAssetRow`; se corrigió el literal. Los seis scripts inline pasaron `node --check` y el navegador abrió el mapa 3D y Administración sin errores de ejecución. Permanece un aviso de Three.js sobre su distribución clásica.
 - A pedido del usuario, Vista global inicia con el sidebar completo y conserva el botón para mostrar solo íconos. En navegador se comprobó el ancho inicial de 215 px y el ancho de 68 px después del cambio.
 - La QA integral de Spec 02 sigue pendiente en OPA-QA, junto con los formularios y relaciones editables de OPA-C.
+
+## Spec 02 — OPA-A2, instantánea simulada, 2026-10-21
+
+El usuario priorizó quitar reproducción y Escenarios, y mostrar una instantánea fija de la demo. Sol high retiró franja, controles, temporizador, listeners y navegación de Escenarios; normalizó hashes heredados de `scenario`/`time`; fijó las lecturas a las 10:28 y mantuvo la última muestra de `p1s2` a las 10:11.
+
+- Revisión independiente Sol high: el código no mostró hallazgos P1/P2 de ejecución estática. Detectó que la aceptación anterior aún exigía minuto/escenario compartibles; se actualizó el contrato OPA-006 y su verificación para reflejar la decisión posterior del usuario.
+- El implementador verificó sintaxis de cinco scripts inline y carga inicial de la maqueta en Chrome headless. La QA integrada de navegación, gráficos y tamaños queda pendiente.
