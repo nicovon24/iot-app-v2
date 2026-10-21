@@ -134,5 +134,7 @@ El usuario aprobó implementar Spec 02 y pidió bajar la planificación de Astra
 | `/root/review_opa_base` | Sol high, revisión independiente | Dos rondas estáticas; hallazgos resueltos y OPA-BASE aprobable. No ejecutó pruebas. |
 | `/root/sol_base_admin_implementation` | Sol high | Implementó OPA-A1: cuatro tablas de Inventario, filtros, accesos contextuales y hash; corrigió hallazgos de revisión. |
 | `/root/review_opa_base` | Sol high, revisión independiente | Revisión estática OPA-A1: dos hallazgos resueltos; corte aprobado. No ejecutó pruebas. |
+| `/root/sol_base_admin_implementation` | Sol high | Implementó OPA-B: Administración con Estructura y Contenido, árbol, subárbol y estados vacíos. |
+| `/root/review_opa_base` | Sol high, revisión independiente | Revisión estática OPA-B: sin hallazgos P1/P2; corte aprobado. |
 
 Los modelos indicados reflejan las asignaciones solicitadas a `spawn_agent`; la herramienta no expone telemetría para verificar de forma independiente el modelo efectivo. No se cambia configuración del harness.

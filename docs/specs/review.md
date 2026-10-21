@@ -155,3 +155,12 @@ Sol high implementó Inventario con vistas tabulares de Clientes, Ubicaciones, A
 - Revisión estática independiente Sol high encontró P1: abrir un detalle de otro cliente mantenía scopes descendientes incompatibles; y P2: `customer=all` se interpretaba como cliente borrado.
 - Sol agregó poda de scopes para los destinos de navegación y permitió `customer=all` en la lectura del hash. La revisión independiente confirmó ambas correcciones y no identificó hallazgos nuevos en esas rutas.
 - Aprobado estáticamente para el corte OPA-A1. Administración/CRUD no forman parte de este corte. No se ejecutaron pruebas ni se inspeccionó el resultado en navegador; la QA dinámica queda para OPA-QA.
+
+## Spec 02 — OPA-B, revisión y carga inicial, 2026-10-21
+
+Sol high implementó Administración con Estructura y Contenido coordinados, expansión independiente de la selección, búsqueda, activos y dispositivos del subárbol, Sin asignar, estados vacíos y restauración de `node`/`content` desde el hash. Las acciones CRUD están visibles y deshabilitadas hasta OPA-C.
+
+- Revisión estática independiente Sol high: sin hallazgos P1/P2 en jerarquía, selección, contenido, hash, vacíos, escape de texto ni CSS móvil.
+- La consola del usuario identificó un error de sintaxis en la plantilla de `adminAssetRow`; se corrigió el literal. Los seis scripts inline pasaron `node --check` y el navegador abrió el mapa 3D y Administración sin errores de ejecución. Permanece un aviso de Three.js sobre su distribución clásica.
+- A pedido del usuario, Vista global inicia con el sidebar completo y conserva el botón para mostrar solo íconos. En navegador se comprobó el ancho inicial de 215 px y el ancho de 68 px después del cambio.
+- La QA integral de Spec 02 sigue pendiente en OPA-QA, junto con los formularios y relaciones editables de OPA-C.
