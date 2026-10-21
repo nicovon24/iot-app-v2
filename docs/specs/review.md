@@ -184,3 +184,12 @@ Sol high amplió Estructura hasta Activo/Dispositivo con relaciones reales, esta
 
 - Inspección adicional del coordinador en Chrome DevTools: a 1440 px Estructura y Contenido miden 567 × 666 px cada uno; a 900 px se apilan con ancho 634 px y sin desborde del documento; con emulación móvil 390 × 844, `innerWidth=390`, `scrollWidth=390`, ambos paneles miden 360 px y el primer cliente está seleccionado. Se inspeccionó una captura visible de la vista móvil.
 - La QA de lectura completa, incluidas interacción por teclado y estados de todas las entidades, se mantiene en OPA-QA-READ.
+
+## Spec 02 — OPA-S0–S3, Soluciones, 2026-10-21
+
+Se reemplazó el dashboard genérico de Soluciones, incluida su redefinición posterior que ocultaba cualquier vista específica. El catálogo ahora coloca Soluciones segundo en el sidebar y distingue Airport Management, Predictive Maintenance y Temperatura como disponibles; Air Quality, People, Assets y Data Center Management dicen «En preparación». Los enlaces directos a estas cuatro últimas muestran su estado y ningún sensor ajeno. Las tres vistas disponibles usan las relaciones, `reading`, `status` y umbrales de la misma fixture que Inventario y detalle, con instantánea simulada a las 10:28.
+
+- Airport Management: en Aero Demo/Lima/Terminal A se observaron temperatura de HVAC-01, potencia, CO₂ y ocupación, con estado, unidad, hora y accesos a sensor/activo. No se añadieron vuelos, colas ni pasajeros reales.
+- Predictive Maintenance: las Máquinas 01/02 de Porta/Córdoba muestran temperatura y vibración; la vibración `p1s2` se identifica como última muestra histórica a las 10:11 y como sin señal a las 10:28. Los desvíos se describen por umbral propio, sin pronóstico de falla.
+- Temperatura: se observaron cuatro sensores en Córdoba, Lima y Santiago. El filtro Ubicación=Santiago y Estado=Atención dejó Rack R-01; la selección mostró su tendencia y umbrales.
+- Comprobación inicial en Chrome: orden del sidebar, 3+4 tarjetas, cuatro rutas de solución, filtro/selección de temperatura y móvil 390 px sin desborde (`scrollWidth=390`). Se comprobaron seis scripts con `node --check`; consola sin errores, con advertencia preexistente de Three.js clásico. La revisión independiente y la QA integrada de lectura siguen pendientes en OPA-QA-READ.

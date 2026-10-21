@@ -18,12 +18,12 @@ Fuente editable: [IoTArg.html](../../../designs/IoTArg.html). La maqueta ya incl
 | A — Inventario | P0 | Clientes pasa a tabla; cuatro pestañas comparten estados, filtros, navegación contextual y accesos a descendientes. |
 | B — Administración | P1 | Tabla árbol Estructura a la izquierda y tabla Contenido a la derecha; selección, búsqueda, activos expandibles y dispositivos sin asignar. |
 | A2 — Instantánea | Hecho | Retirar reproducción/Escenarios y mostrar la lectura simulada fija coherente en todas las vistas. |
-| B2 — Refinar Administración | Siguiente | Paneles equivalentes, árbol completo hasta Dispositivo, estados y selección inicial útil. |
-| S0 — Catálogo de Soluciones | Siguiente | Soluciones segundo ítem; tres experiencias disponibles y cuatro en preparación. |
-| S1 — Airport Management | Después de S0 | Vista operativa de terminal con señales existentes y acceso a entidades. |
-| S2 — Predictive Maintenance | Después de S1 | Vista de estado de máquinas y desvíos explicables, sin predicción ficticia. |
-| S3 — Temperatura | Después de S2 | Vista comparable de sensores térmicos, sus umbrales y antigüedad. |
-| QA de lectura | Después de S3 | Recorrido integrado de Administración/Soluciones, navegación, accesibilidad y tamaños. |
+| B2 — Refinar Administración | Hecho | Paneles equivalentes, árbol completo hasta Dispositivo, estados y selección inicial útil. |
+| S0 — Catálogo de Soluciones | Implementado; revisión pendiente | Soluciones segundo ítem; tres experiencias disponibles y cuatro en preparación. |
+| S1 — Airport Management | Implementado; revisión pendiente | Vista operativa de terminal con señales existentes y acceso a entidades. |
+| S2 — Predictive Maintenance | Implementado; revisión pendiente | Vista de estado de máquinas y desvíos explicables, sin predicción ficticia. |
+| S3 — Temperatura | Implementado; revisión pendiente | Vista comparable de sensores térmicos, sus umbrales y antigüedad. |
+| QA de lectura | Pendiente | Recorrido integrado de Administración/Soluciones, navegación, accesibilidad y tamaños. |
 | C — Acciones de demo | Pendiente | Agregar, editar, eliminar, asignar, mover y desvincular desde las tablas, con formularios laterales, confirmaciones y actualización de las demás vistas. |
 | D — Aplicación conectada | Futuro | Adaptar los formularios y permisos a las entidades y API reales de `iot_app`/ThingsBoard según [integración](tbd-thingsboard-integration.md). |
 

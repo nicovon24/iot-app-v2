@@ -46,7 +46,7 @@ APP-T01 debe asignar archivos concretos antes de delegar las tareas de etapa 2. 
 
 ## Spec 02 — Entidades operativas y Administración
 
-[Spec 02](subspecs/02-operational-tables-admin.md), revisión 3, reúne Inventario, Administración y Soluciones de demo. Base/A1/B/A2 están implementados. El usuario antepuso refinamiento visual de Administración y tres Soluciones a los formularios; C, QA de mutaciones e integración real quedan pendientes. Cada corte del HTML tiene un solo escritor y revisión independiente antes de marcarse completo.
+[Spec 02](subspecs/02-operational-tables-admin.md), revisión 3, reúne Inventario, Administración y Soluciones de demo. Base/A1/B/A2/B2 y S0–S3 están implementados; la QA integrada de lectura sigue pendiente. El usuario antepuso Administración visual y tres Soluciones a los formularios; C, QA de mutaciones e integración real quedan pendientes. Los cortes S0–S3 comparten una entrega del HTML y tienen comprobación funcional inicial, sin revisión independiente todavía.
 
 | ID | Requisitos | Dependencia | Responsable / rutas asignadas | Comprobación esperada | Estado |
 | --- | --- | --- | --- | --- | --- |
@@ -57,10 +57,10 @@ APP-T01 debe asignar archivos concretos antes de delegar las tareas de etapa 2. 
 | OPA-A2 | OPA-006 | OPA-B | Mismo implementador Sol high; `designs/IoTArg.html` | Reproducción y Escenarios retirados; instantánea simulada fija, hash heredado normalizado y gráfico 60/15 consistente | Implementado; revisión estática aprobada tras actualizar el contrato; comprobación inicial en navegador, QA integrada pendiente |
 | OPA-DOC3 | OPA-017 a OPA-026 | Decisión del usuario y plan Astra medium | Coordinador; Spec 02, tareas, revisión y orquestación | Contrato B2/S0–S3 antes de C, datos simulados honestos y aceptación verificable | Documentado; revisión independiente aprobada |
 | OPA-B2 | OPA-017 a OPA-019 | OPA-A2, OPA-DOC3 | Implementador Sol high; `designs/IoTArg.html` | Paneles 50/50, árbol completo, barra/tooltip de estado y primera selección | Implementado; revisión estática independiente aprobada; 1440/900/390 inspeccionados en navegador, QA integrada pendiente |
-| OPA-S0 | OPA-020, OPA-021 | OPA-B2 | Mismo implementador Sol high; `designs/IoTArg.html` | Soluciones segundo ítem, tres disponibles y cuatro En preparación; enlaces directos honestos | Pendiente |
-| OPA-S1 | OPA-022, OPA-025 | OPA-S0 | Mismo implementador Sol high; `designs/IoTArg.html` | Airport Management con señales reales de la fixture de Lima/Terminal A | Pendiente |
-| OPA-S2 | OPA-023, OPA-025 | OPA-S1 | Mismo implementador Sol high; `designs/IoTArg.html` | Predictive Maintenance con reglas, temperatura y vibración de Máquina 01/02 | Pendiente |
-| OPA-S3 | OPA-024, OPA-025 | OPA-S2 | Mismo implementador Sol high; `designs/IoTArg.html` | Temperatura compara sensores, umbrales, unidades y hora propios | Pendiente |
+| OPA-S0 | OPA-020, OPA-021 | OPA-B2 | Coordinador; `designs/IoTArg.html` | Soluciones segundo ítem, tres disponibles y cuatro En preparación; enlaces directos honestos | Implementado; navegador comprobado, revisión independiente pendiente |
+| OPA-S1 | OPA-022, OPA-025 | OPA-S0 | Coordinador; `designs/IoTArg.html` | Airport Management con señales de la fixture de Lima/Terminal A | Implementado; navegador comprobado, revisión independiente pendiente |
+| OPA-S2 | OPA-023, OPA-025 | OPA-S1 | Coordinador; `designs/IoTArg.html` | Predictive Maintenance con reglas, temperatura y vibración de Máquina 01/02 | Implementado; navegador comprobado, revisión independiente pendiente |
+| OPA-S3 | OPA-024, OPA-025 | OPA-S2 | Coordinador; `designs/IoTArg.html` | Temperatura compara sensores, umbrales, unidades y hora propios | Implementado; filtros y selección comprobados, revisión independiente pendiente |
 | OPA-QA-READ | OPA-001 a OPA-007, OPA-011, OPA-012, OPA-017 a OPA-026 | OPA-S3 | Reviewer independiente Sol high; coordinador registra evidencia en `docs/specs/review.md` y `designs/evidence/spec02/` | QA integrada de lectura: navegación, estado, hash, teclado, claro/oscuro, 1440/900/390 y mapa | Pendiente |
 | OPA-C | OPA-008, OPA-009, OPA-013 a OPA-016 | OPA-QA-READ | Mismo implementador Sol high; `designs/IoTArg.html` | Formularios, asignar/mover/desvincular, confirmaciones, dependencias, pendientes y sincronización con Inventario/mapa | Pendiente por decisión del usuario |
 | OPA-QA | OPA-008, OPA-009, OPA-013 a OPA-016 | OPA-C | Reviewer independiente Sol high sin editar código; coordinador registra evidencia en `docs/specs/review.md` | QA dinámica de mutaciones: CRUD, asignar/mover/cancelar, recarga, teclado y mapa | Pendiente por decisión del usuario |
@@ -89,6 +89,6 @@ APP-T01 debe asignar archivos concretos antes de delegar las tareas de etapa 2. 
 
 ## Próximo paso
 
-Revisión inicial, capturas de referencia y [Spec 01](subspecs/01-initial-design.md) disponibles. IMP-01/02 y MAP-01/02/03 se completaron para el primer corte cartográfico. Los cortes sudamericanos implementados cubren parte de IMP-04/09/10 sin cerrar esas tareas completas; su evidencia permanece en `review.md`. Secuencia vigente de Spec 02: OPA-BASE → OPA-A1 → OPA-B → OPA-A2 → OPA-B2 → OPA-S0 → OPA-S1 → OPA-S2 → OPA-S3 → OPA-QA-READ. Formularios OPA-C, QA de mutaciones e integración quedan pendientes. Un solo escritor Sol high modifica el HTML por corte; el coordinador mantiene documentos y commits separados.
+Revisión inicial, capturas de referencia y [Spec 01](subspecs/01-initial-design.md) disponibles. IMP-01/02 y MAP-01/02/03 se completaron para el primer corte cartográfico. Los cortes sudamericanos implementados cubren parte de IMP-04/09/10 sin cerrar esas tareas completas; su evidencia permanece en `review.md`. Secuencia vigente de Spec 02: OPA-BASE → OPA-A1 → OPA-B → OPA-A2 → OPA-B2 → OPA-S0–S3 (implementados) → OPA-QA-READ (pendiente). Formularios OPA-C, QA de mutaciones e integración quedan pendientes por decisión del usuario.
 
 Activar el harness requiere resolver OPS-00 y OPS-01; su clon temporal no equivale a instalación.
