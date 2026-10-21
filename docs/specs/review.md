@@ -137,3 +137,13 @@ El usuario sustituyó la Administración como pendientes por dos tablas con CRUD
 - Reviewer en contexto nuevo `/root/spec02_v2_plan_review`, perfil `sdd_reviewer` (Sol high solicitado), examinó revisión 2 de Spec 02, tareas, índice y referencia de integración. P1: faltaba CTA para alta de Device con cliente vacío. P2: tarea QA no exigía ejecución dinámica después de formularios. Sugirió precisar secuencias válidas de niveles.
 - Correcciones del coordinador: cabecera de Contenido con +Activo/+Dispositivo/Asignar, flujo sin asignación, recuperación de padre faltante, QA dinámica en OPA-QA, niveles y alcance administrativo explícitos. `followup_task` solicitó revalidación y se recibió **aprobado para presentar el plan al usuario**. Aprobación solo documental, sin pruebas de HTML.
 - No se asignó implementador ni se editó `designs/IoTArg.html`. Las tareas Base/A/B/C, retiro del timeline y QA esperan confirmación del usuario sobre el plan. La matriz de verificación de Spec 02 define las comprobaciones futuras.
+
+## Spec 02 — OPA-BASE, revisión estática, 2026-10-21
+
+Sol high actualizó el catálogo de demo a relaciones con ID estable, lectores comunes, persistencia de sesión versionada, lecturas con procedencia y vistas tolerantes a entidades sin datos/ubicación. Astra medium recomendó conservar un solo escritor para el HTML y cerrar primero Base; Luna high localizó los acoplamientos del prototipo. La secuencia y aceptación se registran en [orchestration.md](orchestration.md) y [tasks.md](tasks.md).
+
+- Primera revisión independiente Sol high: hallazgos sobre ubicación opcional, muestra incompatible con clave/unidad editada, escape de entradas, enlaces a IDs borrados y actualización del texto de pines.
+- Segunda revisión: hallazgos anteriores resueltos; encontró además el pin 0,0 para coordenadas nulas en SVG y navegación a áreas sin ubicación.
+- Revisión estática final: guardia de coordenadas y navegación de áreas sin ubicación corregidos; no se identificaron bloqueos restantes para OPA-BASE.
+- Alcance aprobado estáticamente: modelo/versionado, compatibilidad de relaciones, vacíos y recuperación de enlaces. Alta/edición/borrado y movimientos pertenecen a OPA-C; la validación dinámica integrada queda para OPA-QA.
+- No se ejecutaron pruebas ni se inspeccionó el resultado en navegador en este corte.

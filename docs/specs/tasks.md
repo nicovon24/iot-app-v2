@@ -46,12 +46,12 @@ APP-T01 debe asignar archivos concretos antes de delegar las tareas de etapa 2. 
 
 ## Spec 02 — Entidades operativas y Administración
 
-[Spec 02](subspecs/02-operational-tables-admin.md), revisión 2, reúne Inventario y Administración con dos tablas y CRUD local. La entrega propuesta cubre Base/A/B/C, timeline y QA; la conexión real queda diferida. El usuario pidió revisar el plan antes de iniciar implementación. Cada corte del HTML tiene un solo escritor y requiere revisión independiente antes de marcarse completo.
+[Spec 02](subspecs/02-operational-tables-admin.md), revisión 2, reúne Inventario y Administración con dos tablas y CRUD local. La entrega propuesta cubre Base/A/B/C, timeline y QA; la conexión real queda diferida. El usuario aprobó la revisión 2 y autorizó iniciar la implementación. Cada corte del HTML tiene un solo escritor y requiere revisión independiente antes de marcarse completo.
 
 | ID | Requisitos | Dependencia | Responsable / rutas asignadas | Comprobación esperada | Estado |
 | --- | --- | --- | --- | --- | --- |
-| OPA-DOC | OPA-001 a OPA-016 | Investigación de revisión 2 | Coordinador; Spec 02, índice, tareas y referencias transversales | Plan coherente y revisión independiente; presentación al usuario | Revisión documental 2 completada y aprobada; espera confirmación del usuario para implementar |
-| OPA-BASE | OPA-004, OPA-012, OPA-014, OPA-016; DATA-001/003/004 | OPA-DOC y confirmación del usuario sobre revisión 2 | Implementador Sol high; `designs/IoTArg.html` | Áreas con ID, niveles/lectores, relaciones únicas, vacíos, lectura offline y sessionStorage | Pendiente / prerrequisito |
+| OPA-DOC | OPA-001 a OPA-016 | Investigación de revisión 2 | Coordinador; Spec 02, índice, tareas y referencias transversales | Plan coherente y revisión independiente; presentación al usuario | Revisión documental 2 completada y aprobada por el usuario |
+| OPA-BASE | OPA-004, OPA-012, OPA-014, OPA-016; DATA-001/003/004 | OPA-DOC y aprobación del usuario | Implementador Sol high; `designs/IoTArg.html` | Áreas con ID, niveles/lectores, relaciones únicas, vacíos, lectura offline y sessionStorage | Implementado; revisión estática independiente aprobada; comprobaciones dinámicas reservadas para OPA-QA |
 | OPA-A1 | OPA-001 a OPA-005, OPA-011 | OPA-BASE | Mismo implementador Sol high; `designs/IoTArg.html` | Inventario con cuatro tablas/pestañas, accesos, filtros/hash y QA 1440/390 px | Pendiente / P0 |
 | OPA-B | OPA-007, OPA-012 | OPA-A1 | Mismo implementador Sol high; `designs/IoTArg.html` | Estructura + Contenido, selección, niveles, activos expandibles y devices | Pendiente / P1 |
 | OPA-C | OPA-008, OPA-009, OPA-013 a OPA-016 | OPA-B | Mismo implementador Sol high; `designs/IoTArg.html` | Formularios, asignar/mover/desvincular, confirmaciones, dependencias, pendientes y sincronización con Inventario/mapa | Pendiente / P1 |
@@ -59,7 +59,7 @@ APP-T01 debe asignar archivos concretos antes de delegar las tareas de etapa 2. 
 | OPA-QA | OPA-001 a OPA-009, OPA-011 a OPA-016 | OPA-A2 | Reviewer independiente Sol high sin editar código; coordinador registra en `docs/specs/review.md` y `designs/evidence/spec02/` | Revisión estática y ejecución dinámica del bloque de verificación de Spec 02: CRUD, asignar/mover/cancelar, recarga, teclado, 1440/900/390 y mapa; un escritor corrige y el reviewer revalida lo afectado | Pendiente |
 | OPA-D | OPA-010, TB-002, TB-003 | OPA-QA, TB-T01/T02; ampliación de contratos CRUD | Rutas de `iot_app` a asignar tras contrato y permisos | Acciones autorizadas por rol, relación principal, movimientos seguros, sin entidades duplicadas | Diferida / integración |
 
-`OPA-BASE` concreta la semántica DATA-001/003/004 que necesita; su entrega se refleja después en `IMP-05` sin exigir que esa tarea entera esté terminada. `OPA-C` amplía la demo con alta/borrado de Device y edición de campos aún no soportados por la referencia conectada. La revisión documental no cierra tareas de implementación. No asignar implementación hasta que el usuario confirme el plan revisado.
+`OPA-BASE` concreta la semántica DATA-001/003/004 que necesita; su entrega se refleja después en `IMP-05` sin exigir que esa tarea entera esté terminada. `OPA-C` amplía la demo con alta/borrado de Device y edición de campos aún no soportados por la referencia conectada. La revisión documental no cierra tareas de implementación.
 
 ## Propuesta de integración ThingsBoard
 
@@ -82,6 +82,6 @@ APP-T01 debe asignar archivos concretos antes de delegar las tareas de etapa 2. 
 
 ## Próximo paso
 
-Revisión inicial, capturas de referencia y [Spec 01](subspecs/01-initial-design.md) disponibles. IMP-01/02 y MAP-01/02/03 se completaron para el primer corte cartográfico. Los cortes sudamericanos implementados cubren parte de IMP-04/09/10 sin cerrar esas tareas completas; su evidencia permanece en `review.md`. Próximo paso: revisión del usuario de Spec 02 revisión 2. Tras confirmar, secuencia OPA-BASE → OPA-A1 → OPA-B → OPA-C → OPA-A2 → OPA-QA. Registrar en las tareas IMP existentes los criterios satisfechos, sin declarar completado el resto de Spec 01. Un solo escritor Sol high modifica el HTML en cada corte.
+Revisión inicial, capturas de referencia y [Spec 01](subspecs/01-initial-design.md) disponibles. IMP-01/02 y MAP-01/02/03 se completaron para el primer corte cartográfico. Los cortes sudamericanos implementados cubren parte de IMP-04/09/10 sin cerrar esas tareas completas; su evidencia permanece en `review.md`. El usuario aprobó Spec 02 revisión 2. Secuencia: OPA-BASE → OPA-A1 → OPA-B → OPA-C → OPA-A2 → OPA-QA. Registrar en las tareas IMP existentes los criterios satisfechos, sin declarar completado el resto de Spec 01. Un solo escritor Sol high modifica el HTML por corte; el coordinador mantiene los documentos y commits separados.
 
 Activar el harness requiere resolver OPS-00 y OPS-01; su clon temporal no equivale a instalación.

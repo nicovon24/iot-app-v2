@@ -20,7 +20,7 @@ Fuente editable: [IoTArg.html](../../../designs/IoTArg.html). La maqueta hoy mue
 | C — Acciones de demo | P1 | Agregar, editar, eliminar, asignar, mover y desvincular desde las tablas, con formularios laterales, confirmaciones y actualización de las demás vistas. |
 | D — Aplicación conectada | Futuro | Adaptar los formularios y permisos a las entidades y API reales de `iot_app`/ThingsBoard según [integración](tbd-thingsboard-integration.md). |
 
-La entrega propuesta incluye Base + A + B + C y el retiro del timeline. El usuario pidió revisar este plan antes de iniciar el HTML: no delegar implementación hasta recibir esa confirmación. Los campos y acciones adicionales de la demo no se presentan como API ya disponible en `iot_app`.
+La entrega propuesta incluye Base + A + B + C y el retiro del timeline. El usuario aprobó esta revisión y autorizó iniciar la implementación. Los campos y acciones adicionales de la demo no se presentan como API ya disponible en `iot_app`.
 
 ## Navegación y modelo de demo
 
@@ -129,6 +129,6 @@ Estos casos son futuros; la revisión de documentos no equivale a ejecutarlos. N
 
 - Inspección estática del prototipo: tarjetas de Clientes y tablas de Ubicaciones/Activos/Dispositivos; no equivale a QA de navegador.
 - Referencia administrativa: `../iot_app/frontend/src/app/admin/page.tsx`, componentes de grillas/formularios y DTOs de `../iot_app/backend/src/`; esta especificación no afirma conexión activa.
-- La aprobación documental inicial corresponde a la revisión 1. Esta revisión 2 modifica OPA-007/008/009 y añade OPA-011 a OPA-016. `/root/spec02_v2_plan_review` revisó y aprobó el plan para presentar al usuario tras precisar alta de Device y QA dinámica; la implementación continúa pendiente. Evidencia en [review.md](../review.md).
+- La aprobación documental inicial corresponde a la revisión 1. Esta revisión 2 modifica OPA-007/008/009 y añade OPA-011 a OPA-016. `/root/spec02_v2_plan_review` aprobó la revisión documental; el usuario confirmó el plan y la implementación comenzó en OPA-BASE. Evidencia en [review.md](../review.md).
 - Investigación de revisión 2: `/root/inventory_admin_gap_v2` confirmó `location.area` textual, `device.loc` duplicado, `renderAsset()` dependiente de `ds[0]`, conteos fijos y ausencia de persistencia del catálogo. Se integraron como prerrequisitos del corte Base.
-- Próximo paso: presentar este plan al usuario. Tras su confirmación, implementar Base → A → B → C → retiro de timeline → QA integrada con un solo escritor Sol high del HTML y revisión independiente Sol high. Modelo/esfuerzo son asignaciones previstas; el registro real se mantiene en [orchestration.md](../orchestration.md).
+- Secuencia aprobada: Base → A → B → C → retiro de timeline → QA integrada. Un solo escritor Sol high modifica el HTML por corte; una revisión independiente comprueba cada corte. El registro real de modelos se mantiene en [orchestration.md](../orchestration.md).

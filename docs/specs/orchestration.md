@@ -122,11 +122,15 @@ La respuesta de creación no incluye telemetría que pruebe el modelo efectivo. 
 
 ## Spec 02 — planificación revisión 2, 2026-10-20
 
-Se anunció al usuario Luna high para investigación y Sol high para revisión del plan. El usuario pidió revisar antes de implementar, por lo que no se inició ningún escritor del HTML. La sesión principal redactó documentos compartidos; no se verifica una variante de modelo del coordinador desde los defaults.
+El usuario aprobó implementar Spec 02 y pidió bajar la planificación de Astra de xhigh a medium. La ejecución se divide en cortes OPA-BASE → OPA-A1 → OPA-B → OPA-C → OPA-A2 → OPA-QA. Un único Sol high escribe `designs/IoTArg.html` por corte; el coordinador actualiza documentación y commits, con revisión Sol independiente antes de cerrar cada corte. La conexión ThingsBoard queda fuera de esta implementación.
 
 | Agente | Perfil / modelo solicitado | Evidencia del runtime |
 | --- | --- | --- |
 | `/root/inventory_admin_gap_v2` | `sdd_researcher`, Luna high | `spawn_agent` devolvió task path; entrega y `FINAL_ANSWER` recibidos con riesgos del HTML y orden de normalización. |
 | `/root/spec02_v2_plan_review` | `sdd_reviewer`, Sol high | `spawn_agent` con contexto nuevo devolvió task path; se recibió revisión con hallazgos, después `followup_task` y aprobación documental de correcciones. |
+| `/root/astra_medium_execution_plan` | Astra medium | Secuencia, puertas de aceptación y riesgos de OPA-BASE entregados; sin cambios en archivos. |
+| `/root/luna_prototype_inventory` | Luna high | Inventario de símbolos y acoplamientos en el HTML entregado; sin cambios en archivos. |
+| `/root/sol_base_admin_implementation` | Sol high | Implementó OPA-BASE: catálogo/relaciones, lecturas, persistencia y compatibilidad del mapa. |
+| `/root/review_opa_base` | Sol high, revisión independiente | Dos rondas estáticas; hallazgos resueltos y OPA-BASE aprobable. No ejecutó pruebas. |
 
-La respuesta de creación reporta task path, sin telemetría independiente del modelo efectivo. Tras confirmación, asignación prevista: un implementador **Sol high**, secuencialmente sobre el mismo HTML, y reviewer independiente **Sol high** para código/QA. Hasta dos subagentes activos; Luna high solo para nuevas preguntas de investigación acotadas. No se cambia configuración del harness.
+Los modelos indicados reflejan las asignaciones solicitadas a `spawn_agent`; la herramienta no expone telemetría para verificar de forma independiente el modelo efectivo. No se cambia configuración del harness.
